@@ -34,8 +34,8 @@ this.addEventListener("fetch", (event) => {
     if (event.request.url === "https://jsonplaceholder.typicode.com/users") {
       console.log('notification started on fetch')
       event.waitUntil(
-        this.registration.showNotification(lorem(2), {
-          body: lorem(10),
+        this.registration.showNotification('Test notification', {
+          body: 'This is test notification for application',
           type: 'basic',
           icon: './favicon.ico',
           requireInteraction: true,
@@ -44,8 +44,8 @@ this.addEventListener("fetch", (event) => {
       )
       setTimeout(() => {
         console.log('show notif from timeout started')
-        this.registration.showNotification(lorem(2), {
-          body: lorem(10),
+        this.registration.showNotification('Test notification', {
+          body: 'This is test notification for application',
           type: 'basic',
           icon: './favicon.ico',
           requireInteraction: true,
