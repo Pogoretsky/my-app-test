@@ -23,11 +23,10 @@ this.addEventListener("install", (event) => {
       type: 'basic',
       icon: './favicon.ico',
       requireInteraction: true,
-      // tag: 'test'
       tag: `notif_${Math.floor((Math.random() * 1000000) + 1)}`
     })
   }
-  const timerId = setInterval(triggerNotification, 5000)
+  const timerId = setInterval(triggerNotification, 30000)
 })
 this.addEventListener("fetch", (event) => {
 
