@@ -26,27 +26,27 @@ export default function Events() {
   return (
     <div className='events'>
       <Header title='Events'/>
-      <img alt='' className='img-fluid m-2' src={EventImage}/>
-      <img alt='' className='img-fluid m-2' src={EventImage2}/>
-      <img alt='' className='img-fluid m-2' src={EventImage4}/>
-      <img alt='' className='img-fluid m-2' src={EventImage3}/>
-      <img alt='' className='img-fluid m-2' src={EventImage4}/>
-      <img alt='' className='img-fluid m-2' src={EventImage5}/>
-      <img alt='' className='img-fluid m-2' src={EventImage2}/>
-      <img alt='' className='img-fluid m-2' src={EventImage4}/>
-      <img alt='' className='img-fluid m-2' src={EventImage5}/>
-      <img alt='' className='img-fluid m-2' src={EventImage2}/>
-      <img alt='' className='img-fluid m-2' src={EventImage3}/>
-      <img alt='' className='img-fluid m-2' src={EventImage5}/>
-      <img alt='' className='img-fluid m-2' src={EventImage2}/>
-      <img alt='' className='img-fluid m-2' src={EventImage3}/>
-      <img alt='' className='img-fluid m-2' src={EventImage3}/>
-      <img alt='' className='img-fluid m-2' src={EventImage4}/>
-      <img alt='' className='img-fluid m-2' src={EventImage2}/>
-      <img alt='' className='img-fluid m-2' src={EventImage3}/>
-      <img alt='' className='img-fluid m-2' src={EventImage5}/>
-      <img alt='' className='img-fluid m-2' src={EventImage4}/>
-      <img alt='' className='img-fluid m-2' src={EventImage5}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage2}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage4}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage3}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage4}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage5}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage2}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage4}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage5}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage2}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage3}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage5}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage2}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage3}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage3}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage4}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage2}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage3}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage5}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage4}/>
+      <img alt='' className='placeholder-img img-fluid m-2' src={EventImage5}/>
       {/*<Table striped bordered hover>*/}
       {/*  <thead>*/}
       {/*  <tr>*/}
