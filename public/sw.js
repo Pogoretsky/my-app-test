@@ -16,20 +16,43 @@ this.addEventListener("install", (event) => {
     })
   )
 
-  const triggerNotification = () => {
-    console.log('triggerNotification STARTED', String(Math.floor((Math.random() * 1000000) + 1)))
-    this.registration.showNotification(lorem(2), {
-      body: lorem(10),
-      type: 'basic',
-      icon: './favicon.ico',
-      requireInteraction: true,
-      tag: `notif_${Math.floor((Math.random() * 1000000) + 1)}`
-    })
-  }
-  const timerId = setInterval(triggerNotification, 30000)
+  // const triggerNotification = () => {
+  //   console.log('triggerNotification STARTED', String(Math.floor((Math.random() * 1000000) + 1)))
+  //   this.registration.showNotification(lorem(2), {
+  //     body: lorem(10),
+  //     type: 'basic',
+  //     icon: './favicon.ico',
+  //     requireInteraction: true,
+  //     tag: `notif_${Math.floor((Math.random() * 1000000) + 1)}`
+  //   })
+  // }
+  // const timerId = setInterval(triggerNotification, 30000)
 })
 this.addEventListener("fetch", (event) => {
+  console.log('fetch started')
 
+    if (event.request.url === "https://jsonplaceholder.typicode.com/users") {
+      console.log('notification started on fetch')
+      event.waitUntil(
+        this.registration.showNotification(lorem(2), {
+          body: lorem(10),
+          type: 'basic',
+          icon: './favicon.ico',
+          requireInteraction: true,
+          tag: `notif_${Math.floor((Math.random() * 1000000) + 1)}`
+        })
+      )
+      setTimeout(() => {
+        console.log('show notif from timeout started')
+        this.registration.showNotification(lorem(2), {
+          body: lorem(10),
+          type: 'basic',
+          icon: './favicon.ico',
+          requireInteraction: true,
+          tag: `notif_${Math.floor((Math.random() * 1000000) + 1)}`
+        })
+      }, 60000)
+    }
   if (!navigator.onLine) {
     // if (event.request.url === "http://localhost:3000/static/js/main.chunk.js") {
     //   event.waitUntil(

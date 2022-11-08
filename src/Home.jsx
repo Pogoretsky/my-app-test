@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Header} from "./Common";
 import HomeImage from "./assets/img/home/home.png";
 import HomeImage2 from "./assets/img/home/home2.png";
@@ -7,6 +7,17 @@ import HomeImage4 from "./assets/img/home/home4.png";
 import HomeImage5 from "./assets/img/home/home5.png";
 
 export default function Home() {
+  useEffect(() => {
+    let url = "https://jsonplaceholder.typicode.com/users"
+    fetch(url).then((response) => {
+      response.json().then((result) => {
+        console.warn(result)
+        localStorage.setItem("users", JSON.stringify(result))
+      })
+    }).catch(err => {
+      // let collection = localStorage.getItem('users');
+    })
+  }, [])
   return (
     <div className='home overflow-auto'>
       <Header title='Welcome!'/>

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import {Header} from "./Common";
 import EventImage from "./assets/img/events/Event.png";
 import EventImage2 from "./assets/img/events/Event2.png";
@@ -7,20 +7,15 @@ import EventImage4 from "./assets/img/events/Event4.png";
 import EventImage5 from "./assets/img/events/Event5.png";
 
 export default function Events() {
-  const [data, setData] = useState([])
-  const [mode, setMode] = useState('online');
   useEffect(() => {
     let url = "https://jsonplaceholder.typicode.com/users"
     fetch(url).then((response) => {
       response.json().then((result) => {
         console.warn(result)
-        setData(result)
         localStorage.setItem("users", JSON.stringify(result))
       })
     }).catch(err => {
-      setMode('offline')
-      let collection = localStorage.getItem('users');
-      setData(JSON.parse(collection))
+      // let collection = localStorage.getItem('users');
     })
   }, [])
   return (

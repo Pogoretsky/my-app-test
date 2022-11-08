@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Header} from "./Common";
 import FeedImage from "./assets/img/feed/feed.png";
 import FeedImage2 from "./assets/img/feed/feed2.png";
@@ -7,6 +7,17 @@ import FeedImage4 from "./assets/img/feed/feed4.png";
 import FeedImage5 from "./assets/img/feed/feed5.png";
 
 export default function Feed() {
+  useEffect(() => {
+    let url = "https://jsonplaceholder.typicode.com/users"
+    fetch(url).then((response) => {
+      response.json().then((result) => {
+        console.warn(result)
+        localStorage.setItem("users", JSON.stringify(result))
+      })
+    }).catch(err => {
+      // let collection = localStorage.getItem('users');
+    })
+  }, [])
   return (
     <div className="feed overflow-y-auto">
       <Header title='Feed'/>
