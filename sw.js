@@ -21,10 +21,13 @@ this.addEventListener("install", (event) => {
     this.registration.showNotification(lorem(2), {
       body: lorem(10),
       type: 'basic',
-      tag: String(Math.floor((Math.random() * 1000000) + 1))
+      icon: './favicon.ico',
+      requireInteraction: true,
+      // tag: 'test'
+      tag: `notif_${Math.floor((Math.random() * 1000000) + 1)}`
     })
   }
-  const timerId = setInterval(triggerNotification, 30000)
+  const timerId = setInterval(triggerNotification, 5000)
 })
 this.addEventListener("fetch", (event) => {
 
