@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Navbar, Nav} from 'react-bootstrap'
-import {NavLink, BrowserRouter as Router} from 'react-router-dom'
+import {NavLink, HashRouter as Router} from 'react-router-dom'
 import RoutesComponent from "./Routes";
 import {ReactComponent as HomeIcon} from './assets/icons/Home.svg'
 import {ReactComponent as FeedIcon} from './assets/icons/Feed.svg'
@@ -30,9 +30,9 @@ function App() {
       window.removeEventListener('online', handleMode);
     }
   }, [])
-
+//min-vh-100 vh-100
   return (
-    <div className="App min-vh-100 vh-100 position-relative">
+    <div className="App position-relative">
       {
         mode === 'offline' ?
           <div className="alert alert-warning" role="alert">
@@ -41,7 +41,7 @@ function App() {
           : null
 
       }
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <RoutesComponent />
         <Navbar className='w-100' variant="light">
           <Nav className="nav-footer mr-auto">

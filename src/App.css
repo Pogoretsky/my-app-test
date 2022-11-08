@@ -3,6 +3,8 @@
   max-width: 800px;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  position: fixed !important;
 }
 .home {
   height: calc(100% - 40px);
